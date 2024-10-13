@@ -23,9 +23,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Hello(HelloViewModel)
+    public IActionResult Hello(HelloViewModel model)
     {
-        return View(new HelloViewModel { Message = "Hello, world from the Cotroller!" });
+        return View(new HelloViewModel { Message = "Hello, world from the Controller!" });
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
