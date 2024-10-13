@@ -23,6 +23,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Hello(HelloViewModel)
+    {
+        return View(new HelloViewModel { Message = "Hello, world from the Cotroller!" });
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
